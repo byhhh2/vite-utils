@@ -1,0 +1,61 @@
+{
+  "name": "@movie/utils",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && npm run copy",
+    "copy": "cp package.json dist/ && cp README.md dist/",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vite": "^5.4.8",
+    "vite-plugin-dts": "^4.2.3"
+  },
+  "main": "index.cjs",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.cjs"
+      },
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
+    },
+    "./at": {
+      "require": {
+        "types": "./at/index.d.ts",
+        "default": "./at/index.cjs"
+      },
+      "import": {
+        "types": "./at/index.d.ts",
+        "default": "./at/index.js"
+      }
+    },
+    "./sleep": {
+      "require": {
+        "types": "./sleep/index.d.ts",
+        "default": "./sleep/index.cjs"
+      },
+      "import": {
+        "types": "./sleep/index.d.ts",
+        "default": "./sleep/index.js"
+      }
+    },
+    "./sum": {
+      "require": {
+        "types": "./sum/index.d.ts",
+        "default": "./sum/index.cjs"
+      },
+      "import": {
+        "types": "./sum/index.d.ts",
+        "default": "./sum/index.js"
+      }
+    }
+  }
+}
