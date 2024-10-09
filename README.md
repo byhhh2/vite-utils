@@ -69,3 +69,15 @@
 - 배럴 파일 피하기
   - 모든 파일이 import되고, 변환되어야 하므로 개별 API만 import 하더라도 모든 파일이 가져와짐
   - 가능하면 subPath로 import 하세요.
+
+## TODO?
+
+- tsconfig에서 build를 번들러가 관여할 수 있게 설정하기
+- package.json에 exports 써서 cjs, esm 둘 다 지원하기
+- subpath
+  - api 별로 path 나누기
+  - `.d.ts`도 `exports`에 포함하기: 제공하는 api에 대한 타입 선언 파일만 접근 가능 하게
+  - named import도 가능하게 `index.js`, `index.cjs`, `index.d.ts`도 내보내기 (`index.d.ts`도 배럴파일?)
+  - 모듈 시스템에 따라 다른 타입 선언 파일(`d.ts`, `d.cts`) 제공하기 (cjs/esm 타입 정의가 다를 수 있다?)
+- 배포할 때 dist 폴더는 빼고 올리기
+- 만약에 패키지 문법이 사용처에서 지원되지 않으면 어떻게 처리할지?
