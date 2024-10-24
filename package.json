@@ -1,6 +1,6 @@
 {
   "name": "younghwa-vite-utils",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "build": "tsc && vite build && npm run copy",
